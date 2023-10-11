@@ -1,0 +1,22 @@
+Python program to create a chatbot in python:
+#importing the necessary libraries
+import numpy as np 
+import pandas as pd 
+import os
+for dirname, _, filenames in os.walk('/kaggle/input'):
+    for filename in filenames:
+        print(os.path.join(dirname, filename))
+df = pd.read_csv('/kaggle/input/stacksample/Tags.csv')
+for i in range(0, len(df)):
+    if df['Tag'][i] == 'python':
+        tag.append(df['Id'][i])
+        print(len(tag))
+df = pd.read_csv('/kaggle/input/stacksample/Questions.csv', encoding = 'ISO-8859-1')
+questions = []
+answers = []
+print(len(df['Id'].unique()))
+for i in range(0, 100000):
+    if df['Id'][i] in tag:
+        questions.append(df['OwnerUserId'][i])
+        questions.append(df['Body'][i])
+        print(len(questions))
